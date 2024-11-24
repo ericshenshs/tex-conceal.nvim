@@ -1,3 +1,5 @@
+echom "Tex-Conceal tex.vim loaded"
+
 if !has('conceal')
   finish
 endif
