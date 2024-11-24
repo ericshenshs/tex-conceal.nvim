@@ -395,91 +395,91 @@ syn match ItemizeEnd '\\end{itemize}' conceal cchar=I
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=E
 syn match EnumerateEnd '\\end{enumerate}' conceal cchar=E
 
-    syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb`' end='`' concealends keepend cchar=v
-    syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend contains=VerbatimBegin,VerbatimEnd
-    syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=V
-    syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=V
+syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb`' end='`' concealends keepend cchar=v
+syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend contains=VerbatimBegin,VerbatimEnd
+syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=V
+syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=V
 
-    syn match CardBegin '\\begin{card}' conceal cchar=c
-    syn match CardEnd '\\end{card}' conceal cchar=c
-    syn match CapitalCardBegin '\\begin{Card}' conceal cchar=C
-    syn match CapitalCardEnd '\\end{Card}' conceal cchar=C
+syn match CardBegin '\\begin{card}' conceal cchar=c
+syn match CardEnd '\\end{card}' conceal cchar=c
+syn match CapitalCardBegin '\\begin{Card}' conceal cchar=C
+syn match CapitalCardEnd '\\end{Card}' conceal cchar=C
 
-    syn region Python  start='\\begin{python}' end='\\end{python}' keepend contains=PythonBegin,PythonEnd
-    syn match PythonBegin '\\begin{python}' contained conceal cchar=P
-    syn match PythonEnd '\\end{python}' contained conceal cchar=P
+syn region Python  start='\\begin{python}' end='\\end{python}' keepend contains=PythonBegin,PythonEnd
+syn match PythonBegin '\\begin{python}' contained conceal cchar=P
+syn match PythonEnd '\\end{python}' contained conceal cchar=P
 
-    syn region Problem start='\\begin{problem}' end='\\end{problem}' keepend contains=ProblemBegin,ProblemEnd
-    syn match ProblemBegin '\\begin{problem}' contained conceal cchar=P
-    syn match ProblemEnd '\\end{problem}' contained conceal cchar=P
+syn region Problem start='\\begin{problem}' end='\\end{problem}' keepend contains=ProblemBegin,ProblemEnd
+syn match ProblemBegin '\\begin{problem}' contained conceal cchar=P
+syn match ProblemEnd '\\end{problem}' contained conceal cchar=P
 
-    syn region Comment start='\\begin{comment}' end='\\end{comment}' keepend contains=CommentBegin,CommentEnd
-    syn match CommentBegin '\\begin{comment}' contained conceal cchar=C
-    syn match CommentEnd '\\end{comment}' contained conceal cchar=C
-    syn region CommentStyleII start='% ' end='\n' keepend contains=CommentStyleIIBegin, TODO, WAIT, DONE, SOON, CommentFoldingStart, CommentFoldingEnd
-    syn match CommentStyleIIBegin '% ' contained conceal
-    syn match CommentFoldingStart '{{{' conceal cchar={
-    syn match CommentFoldingEnd '}}}' conceal cchar=}
+syn region Comment start='\\begin{comment}' end='\\end{comment}' keepend contains=CommentBegin,CommentEnd
+syn match CommentBegin '\\begin{comment}' contained conceal cchar=C
+syn match CommentEnd '\\end{comment}' contained conceal cchar=C
+syn region CommentStyleII start='% ' end='\n' keepend contains=CommentStyleIIBegin, TODO, WAIT, DONE, SOON, CommentFoldingStart, CommentFoldingEnd
+syn match CommentStyleIIBegin '% ' contained conceal
+syn match CommentFoldingStart '{{{' conceal cchar={
+syn match CommentFoldingEnd '}}}' conceal cchar=}
 
-    syn region Url matchgroup=UrlMatch start='\\url{\s*' end='\s*}' concealends keepend cchar=u
-    syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend cchar=r
+syn region Url matchgroup=UrlMatch start='\\url{\s*' end='\s*}' concealends keepend cchar=u
+syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend cchar=r
 
-    syn region Part matchgroup=PartMatch start='\\part{\s*' end='\s*}' concealends keepend
-    syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' concealends keepend
-    syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend cchar=s
-    syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend cchar=b
-    syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend cchar=p
+syn region Part matchgroup=PartMatch start='\\part{\s*' end='\s*}' concealends keepend
+syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' concealends keepend
+syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend cchar=s
+syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend cchar=b
+syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend cchar=p
 
-    syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' concealends keepend cchar=l
-    syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' concealends keepend
+syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' concealends keepend cchar=l
+syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' concealends keepend
 
-    syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
+syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
 
-    syn match TODO 'TODO'
-    syn match WAIT 'WAIT'
-    syn match DONE 'DONE'
-    syn match SOON 'SOON'
+syn match TODO 'TODO'
+syn match WAIT 'WAIT'
+syn match DONE 'DONE'
+syn match SOON 'SOON'
 
-    hi conceal gui=None guifg=None guibg=#1e81b0
+hi conceal gui=None guifg=None guibg=#1e81b0
 
-    " for dark background
-    " hi Verbatim gui=None guifg=#E7EAE5
-    " for light background"
-    hi Verbatim gui=None guifg=#28282B
+" for dark background
+" hi Verbatim gui=None guifg=#E7EAE5
+" for light background"
+hi Verbatim gui=None guifg=#28282B
 
-    hi link VerbatimInline Verbatim
-    hi Python gui=None guifg=#DDD6E1
-    hi Problem gui=None guifg=#DDD6E1
-    hi Comment gui=None guifg=#808080
-    hi CommentStyleII gui=None guifg=#808080
-    ""
-    hi Url gui=underline guifg=#CBC3E3
-    hi Label gui=None guifg=None
-    "" Section
-    "" hi Part gui=None guifg=#40916C
-    "" hi Chapter gui=None guifg=#52B788
-    "" hi Section gui=None guifg=#74C69D
-    "" hi Subsection gui=None guifg=#85CEA8
-    "" hi Paragraph gui=None guifg=#95D5B2
-    hi Part gui=None guifg=#50B4D8
-    hi Chapter gui=None guifg=#9EDDEF
-    hi Section gui=None guifg=#F7E5B7
-    hi Subsection gui=None guifg=#CAB3C1
-    hi Paragraph gui=None guifg=#96B3C2
-    "" TODO
-    hi TODO gui=None guifg=#1AA7EC guibg=#BEBEBE
-    hi WAIT gui=None guifg=#ED7117 guibg=#BEBEBE
-    hi DONE gui=None guifg=#4CBB17 guibg=#BEBEBE
-    hi SOON gui=None guifg=#FB02FF guibg=#BEBEBE
+hi link VerbatimInline Verbatim
+hi Python gui=None guifg=#DDD6E1
+hi Problem gui=None guifg=#DDD6E1
+hi Comment gui=None guifg=#808080
+hi CommentStyleII gui=None guifg=#808080
+""
+hi Url gui=underline guifg=#CBC3E3
+hi Label gui=None guifg=None
+"" Section
+"" hi Part gui=None guifg=#40916C
+"" hi Chapter gui=None guifg=#52B788
+"" hi Section gui=None guifg=#74C69D
+"" hi Subsection gui=None guifg=#85CEA8
+"" hi Paragraph gui=None guifg=#95D5B2
+hi Part gui=None guifg=#50B4D8
+hi Chapter gui=None guifg=#9EDDEF
+hi Section gui=None guifg=#F7E5B7
+hi Subsection gui=None guifg=#CAB3C1
+hi Paragraph gui=None guifg=#96B3C2
+"" TODO
+hi TODO gui=None guifg=#1AA7EC guibg=#BEBEBE
+hi WAIT gui=None guifg=#ED7117 guibg=#BEBEBE
+hi DONE gui=None guifg=#4CBB17 guibg=#BEBEBE
+hi SOON gui=None guifg=#FB02FF guibg=#BEBEBE
 
-    "" hi PythonBegin guibg=#1e81b0
-    "" hi ProblemBegin guibg=#1e81b0
-    "" hi ItemizeBegin guibg=#e28743
-    "" hi VerbatimBegin guibg=#eab676
-    "" hi EnumerateBegin guibg=#76b5c5
-    "" hi PythonEnd guibg=#1e81b0
-    "" hi ProblemEnd guibg=#1e81b0
-    "" hi ItemizeEnd guibg=#e28743
-    "" hi VerbatimEnd guibg=#eab676
-    "" hi EnumerateEnd guibg=#76b5c5
+"" hi PythonBegin guibg=#1e81b0
+"" hi ProblemBegin guibg=#1e81b0
+"" hi ItemizeBegin guibg=#e28743
+"" hi VerbatimBegin guibg=#eab676
+"" hi EnumerateBegin guibg=#76b5c5
+"" hi PythonEnd guibg=#1e81b0
+"" hi ProblemEnd guibg=#1e81b0
+"" hi ItemizeEnd guibg=#e28743
+"" hi VerbatimEnd guibg=#eab676
+"" hi EnumerateEnd guibg=#76b5c5
 
