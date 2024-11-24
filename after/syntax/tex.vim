@@ -444,9 +444,9 @@ syn match SOON 'SOON'
 hi conceal gui=None guifg=None guibg=None
 
 " for dark background
-" hi Verbatim gui=None guifg=#E7EAE5
+hi Verbatim gui=None guifg=#E7EAE5
 " for light background"
-hi Verbatim gui=None guifg=#28282B
+" hi Verbatim gui=None guifg=#28282B
 
 hi link VerbatimInline Verbatim
 hi Python gui=None guifg=#DDD6E1
