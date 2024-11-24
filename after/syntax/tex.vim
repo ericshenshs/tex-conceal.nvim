@@ -480,3 +480,7 @@ hi ProblemEnd guibg=#1e81b0
 hi ItemizeEnd guibg=#e28743
 hi VerbatimEnd guibg=#eab676
 hi EnumerateEnd guibg=#76b5c5
+hi CardBegin guibg=#1e81b0
+hi CardEnd guibg=#1e81b0
+hi CapitalCardBegin guibg=#1e81b0
+hi CapitalCardEnd guibg=#1e81b0
