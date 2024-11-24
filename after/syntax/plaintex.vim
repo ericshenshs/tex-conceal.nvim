@@ -440,7 +440,8 @@ syn match WAIT 'WAIT'
 syn match DONE 'DONE'
 syn match SOON 'SOON'
 
-hi conceal gui=None guifg=None guibg=#1e81b0
+" hi conceal gui=None guifg=None guibg=#1e81b0
+hi conceal gui=None guifg=None guibg=None
 
 " for dark background
 " hi Verbatim gui=None guifg=#E7EAE5
@@ -455,17 +456,14 @@ hi CommentStyleII gui=None guifg=#808080
 ""
 hi Url gui=underline guifg=#CBC3E3
 hi Label gui=None guifg=None
+
 "" Section
-"" hi Part gui=None guifg=#40916C
-"" hi Chapter gui=None guifg=#52B788
-"" hi Section gui=None guifg=#74C69D
-"" hi Subsection gui=None guifg=#85CEA8
-"" hi Paragraph gui=None guifg=#95D5B2
 hi Part gui=None guifg=#50B4D8
 hi Chapter gui=None guifg=#9EDDEF
 hi Section gui=None guifg=#F7E5B7
 hi Subsection gui=None guifg=#CAB3C1
 hi Paragraph gui=None guifg=#96B3C2
+
 "" TODO
 hi TODO gui=None guifg=#1AA7EC guibg=#BEBEBE
 hi WAIT gui=None guifg=#ED7117 guibg=#BEBEBE
