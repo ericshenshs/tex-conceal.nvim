@@ -482,4 +482,3 @@ hi SOON gui=None guifg=#FB02FF guibg=#BEBEBE
 "" hi ItemizeEnd guibg=#e28743
 "" hi VerbatimEnd guibg=#eab676
 "" hi EnumerateEnd guibg=#76b5c5
-
