@@ -1,9 +1,5 @@
 echom "Tex-Conceal tex.vim loaded"
 
-if !has('conceal')
-  finish
-endif
-
 " Original file is https://github.com/wjakob/wjakob.vim/blob/master/after/syntax/tex.vim
 
 " not defined in vim/runtime/syntax/tex.vim
