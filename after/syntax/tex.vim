@@ -406,31 +406,31 @@ syn match CapitalCardBegin '\\begin{Card}' conceal cchar=C
 syn match CapitalCardEnd '\\end{Card}' conceal cchar=C
 
 syn region Python  start='\\begin{python}' end='\\end{python}' keepend contains=PythonBegin,PythonEnd
-syn match PythonBegin '\\begin{python}' contained conceal cchar=P
-syn match PythonEnd '\\end{python}' contained conceal cchar=P
+syn match PythonBegin '\\begin{python}' contained conceal cchar=p
+syn match PythonEnd '\\end{python}' contained conceal cchar=p
 
 syn region Problem start='\\begin{problem}' end='\\end{problem}' keepend contains=ProblemBegin,ProblemEnd
 syn match ProblemBegin '\\begin{problem}' contained conceal cchar=P
 syn match ProblemEnd '\\end{problem}' contained conceal cchar=P
 
 syn region Comment start='\\begin{comment}' end='\\end{comment}' keepend contains=CommentBegin,CommentEnd
-syn match CommentBegin '\\begin{comment}' contained conceal cchar=C
-syn match CommentEnd '\\end{comment}' contained conceal cchar=C
+syn match CommentBegin '\\begin{comment}' contained conceal
+syn match CommentEnd '\\end{comment}' contained conceal
 syn region CommentStyleII start='% ' end='\n' keepend contains=CommentStyleIIBegin, TODO, WAIT, DONE, SOON, CommentFoldingStart, CommentFoldingEnd
 syn match CommentStyleIIBegin '% ' contained conceal
-syn match CommentFoldingStart '{{{' conceal cchar={
-syn match CommentFoldingEnd '}}}' conceal cchar=}
+syn match CommentFoldingStart '{{{' conceal
+syn match CommentFoldingEnd '}}}' conceal
 
-syn region Url matchgroup=UrlMatch start='\\url{\s*' end='\s*}' concealends keepend cchar=u
-syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend cchar=r
+syn region Url matchgroup=UrlMatch start='\\url{\s*' end='\s*}' concealends keepend
+syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend
 
 syn region Part matchgroup=PartMatch start='\\part{\s*' end='\s*}' concealends keepend
 syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' concealends keepend
-syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend cchar=s
-syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend cchar=b
-syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend cchar=p
+syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend
+syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend
+syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend
 
-syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' concealends keepend cchar=l
+syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' concealends keepend
 syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' concealends keepend
 
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
