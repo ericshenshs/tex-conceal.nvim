@@ -472,13 +472,13 @@ hi WAIT gui=None guifg=#ED7117 guibg=#BEBEBE
 hi DONE gui=None guifg=#4CBB17 guibg=#BEBEBE
 hi SOON gui=None guifg=#FB02FF guibg=#BEBEBE
 
-"" hi PythonBegin guibg=#1e81b0
-"" hi ProblemBegin guibg=#1e81b0
-"" hi ItemizeBegin guibg=#e28743
-"" hi VerbatimBegin guibg=#eab676
-"" hi EnumerateBegin guibg=#76b5c5
-"" hi PythonEnd guibg=#1e81b0
-"" hi ProblemEnd guibg=#1e81b0
-"" hi ItemizeEnd guibg=#e28743
-"" hi VerbatimEnd guibg=#eab676
-"" hi EnumerateEnd guibg=#76b5c5
+hi PythonBegin guibg=#1e81b0
+hi ProblemBegin guibg=#1e81b0
+hi ItemizeBegin guibg=#e28743
+hi VerbatimBegin guibg=#eab676
+hi EnumerateBegin guibg=#76b5c5
+hi PythonEnd guibg=#1e81b0
+hi ProblemEnd guibg=#1e81b0
+hi ItemizeEnd guibg=#e28743
+hi VerbatimEnd guibg=#eab676
+hi EnumerateEnd guibg=#76b5c5
