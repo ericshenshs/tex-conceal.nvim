@@ -393,7 +393,7 @@ syn match ItemizeEnd '\\end{itemize}' conceal cchar=I
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=E
 syn match EnumerateEnd '\\end{enumerate}' conceal cchar=E
 
-syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb`' end='`' concealends keepend cchar=v
+syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb|' end='|' concealends keepend
 syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend contains=VerbatimBegin,VerbatimEnd
 syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=V
 syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=V
