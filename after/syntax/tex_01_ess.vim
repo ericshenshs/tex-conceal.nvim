@@ -40,10 +40,13 @@ hi HyperrefText gui=underline guifg=#1e81b0
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
 
 " verbatim
-syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb|' end='|' concealends keepend contains=VerbatimInlineBegin,VerbatimInlineEnd
-syn match VerbatimInlineBegin '\\verb|' contained conceal
-syn match VerbatimInlineEnd '|' contained conceal
-hi VerbatimInline gui=italic guifg=#eab676
+" syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb|' end='|' concealends keepend contains=VerbatimInlineBegin,VerbatimInlineEnd
+" syn match VerbatimInlineBegin '\\verb|' contained conceal
+" syn match VerbatimInlineEnd '|' contained conceal
+" hi VerbatimInline gui=italic guifg=#eab676
+
+syntax region texVerb start=+\\verb|+ end=+|+ oneline containedin=ALL keepend concealends
+hi texVerb gui=italic guifg=#eab676
 
 " environments (A-Z) {{{1
 
