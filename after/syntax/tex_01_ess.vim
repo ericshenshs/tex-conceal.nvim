@@ -42,10 +42,10 @@ syntax region HyperrefText matchgroup=HyperrefTextMatch start='{\s*' end='\s*}' 
 hi HyperrefText gui=underline guifg=#1e81b0
 
 " href
-syntax region Href start=+\\href{+ end=+}+ oneline containedin=ALL concealends keepend contains=HrefBegin,HrefEnd
-syn match HrefStart '\\href{' contained conceal
-syn match HrefEnd '}' contained conceal
-hi Href gui=underline guifg=#1e81b0
+syntax match HrefAll /\\href{[^}]*}{[^}]*}/ containedin=ALL
+syntax region HrefLink start=+\\href{+ end=+}+ contained containedin=texHrefAll conceal oneline
+syntax region HrefText matchgroup=HrefText start=+}{+ end=+}+ concealends keepend contained containedin=texHrefAll oneline
+hi HrefTex gui=underline guifg=#1e81b0
 
 " font format
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
