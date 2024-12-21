@@ -44,8 +44,8 @@ hi HyperrefText gui=underline guifg=#1e81b0
 " href
 syntax match HrefAll /\\href{[^}]*}{[^}]*}/ containedin=ALL
 syntax region HrefLink start=+\\href{+ end=+}+ contained conceal containedin=HrefAll
-syntax region HrefText matchgroup=HrefText start=+}{+ end=+}+ concealends keepend contained containedin=texHrefAll
-hi HrefTex gui=underline guifg=#1e81b0
+syntax region HrefText matchgroup=HrefTextMatch start='}{\s*' end='\s*}' concealends keepend contained containedin=texHrefAll
+hi HrefText gui=underline guifg=#1e81b0
 
 " font format
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
