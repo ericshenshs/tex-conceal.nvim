@@ -16,12 +16,6 @@ hi Url gui=underline guifg=#CBC3E3
 hi Label gui=None guifg=None
 
 "" Section
-hi Part gui=None guifg=#50B4D8
-hi Chapter gui=None guifg=#9EDDEF
-hi Section gui=None guifg=#F7E5B7
-hi Subsection gui=None guifg=#CAB3C1
-hi Paragraph gui=None guifg=#96B3C2
-
 hi PythonBegin guibg=#1e81b0
 hi ProblemBegin guibg=#1e81b0
 hi ItemizeBegin guibg=#e28743

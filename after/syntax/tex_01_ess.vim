@@ -21,6 +21,11 @@ syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' conc
 syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend
 syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend
 syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend
+hi Part gui=bold guifg=#50B4D8
+hi Chapter gui=bold guifg=#9EDDEF
+hi Section gui=bold guifg=#F7E5B7
+hi Subsection gui=bold guifg=#CAB3C1
+hi Paragraph gui=bold guifg=#96B3C2
 
 " links (external)
 syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend
