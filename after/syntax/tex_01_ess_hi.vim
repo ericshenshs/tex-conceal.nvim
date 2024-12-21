@@ -4,15 +4,10 @@ echom "Tex-Conceal tex_01_ess_hi.vim loaded"
 
 " customized tex highlight
 
-" hi conceal gui=None guifg=None guibg=#1e81b0
 hi conceal gui=None guifg=None guibg=None
 
-" for dark background
 hi Verbatim gui=None guifg=#E7EAE5
-" for light background"
-" hi Verbatim gui=None guifg=#28282B
 
-hi link VerbatimInline Verbatim
 hi Python gui=None guifg=#DDD6E1
 hi Problem gui=None guifg=#DDD6E1
 hi Comment gui=None guifg=#808080
