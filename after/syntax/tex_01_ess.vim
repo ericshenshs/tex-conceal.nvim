@@ -27,7 +27,7 @@ syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' 
 syn region Url matchgroup=UrlMatch start='\\url{\s*' end='\s*}' concealends keepend
 
 " links (internal)
-syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' concealends keepend
+syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' conceal cchar=l
 syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' concealends keepend
 
 " hyperref
