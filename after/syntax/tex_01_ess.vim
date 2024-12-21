@@ -33,7 +33,7 @@ syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' conc
 syntax match HyperrefAll /\\hyperref\[[^]]*\]{[^}]*}/ containedin=ALL
 syntax match HyperrefCommand /\\hyperref\[[^]]*\]/ contained conceal containedin=HyperrefAll
 syntax region HyperrefText matchgroup=HyperrefTextMatch start='{\s*' end='\s*}' concealends keepend contained containedin=HyperrefAll
-hi HyperrefTextMatch gui=underline guifg=#CBC3E3
+hi HyperrefText gui=underline guifg=#1e81b0
 
 " font format
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
