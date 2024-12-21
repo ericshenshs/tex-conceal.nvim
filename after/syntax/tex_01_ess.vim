@@ -30,10 +30,10 @@ syn region Label matchgroup=LabelMatch start='\\label{\s*' end='\s*}' concealend
 syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' concealends keepend
 
 " hyperref
-syntax match texHyperrefAll /\\hyperref\[[^]]*\]{[^}]*}/ containedin=ALL
-syntax match texHyperrefCommand /\\hyperref\[[^]]*\]/ contained conceal containedin=texHyperrefAll
-syntax region texHyperrefText start=+{+ end=+}+ contained concealends containedin=texHyperrefAll
-hi texHyperrefText gui=underline guifg=#CBC3E3
+syntax match HyperrefAll /\\hyperref\[[^]]*\]{[^}]*}/ containedin=ALL
+syntax match HyperrefCommand /\\hyperref\[[^]]*\]/ contained conceal containedin=HyperrefAll
+syntax region HyperrefText matchgroup=HyperrefTextMatch start='{\s*' end='\s*}' concealends keepend contained containedin=HyperrefAll
+hi HyperrefTextMatch gui=underline guifg=#CBC3E3
 
 " font format
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
