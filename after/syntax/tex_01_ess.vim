@@ -43,7 +43,7 @@ syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' conceal
 syn region VerbatimInline matchgroup=VerbatimInlineMatch start='\\verb|' end='|' concealends keepend contains=VerbatimInlineBegin,VerbatimInlineEnd
 syn match VerbatimInlineBegin '\\verb|' contained conceal
 syn match VerbatimInlineEnd '|' contained conceal
-hi VerbatimInline gui=None guifg=#E7EAE5
+hi VerbatimInline gui=italic guifg=#eab676
 
 " environments (A-Z) {{{1
 
