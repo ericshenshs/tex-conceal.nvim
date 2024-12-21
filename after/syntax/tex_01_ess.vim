@@ -2,52 +2,6 @@ echom "Tex-Conceal tex_01_ess.vim loaded"
 
 " set customized tex concealing
 
-syn match texMathSymbol '\^\%(\*\|\\ast\|\\star\|{\s*\\\%(ast\|star\)\s*}\)' contained conceal cchar=˟
-syn match texMathSymbol '\^{\s*-1\s*}' contained conceal contains=texSuperscripts
-syn match texMathSymbol '\^\%(\\math\%(rm\|sf\){\s*T\s*}\|{\s*\\math\%(rm\|sf\){\s*T\s*}\s*}\)' contained conceal contains=texSuperscripts
-syn match texMathSymbol '\^\%(\\math\%(rm\|sf\){\s*-T\s*}\|{\s*\\math\%(rm\|sf\){\s*-T\s*}\s*}\|{\s*-\s*\\math\%(rm\|sf\){\s*T\s*}\s*}\)' contained conceal contains=texSuperscripts
-syn match texSuperscripts '1' contained conceal cchar=¹
-syn match texSuperscripts '-' contained conceal cchar=⁻
-syn match texSuperscripts 'T' contained conceal cchar=ᵀ
-
-call s:SuperSub('_','0','₀')
-call s:SuperSub('_','1','₁')
-call s:SuperSub('_','2','₂')
-call s:SuperSub('_','3','₃')
-call s:SuperSub('_','4','₄')
-call s:SuperSub('_','5','₅')
-call s:SuperSub('_','6','₆')
-call s:SuperSub('_','7','₇')
-call s:SuperSub('_','8','₈')
-call s:SuperSub('_','9','₉')
-call s:SuperSub('_','a','ₐ')
-call s:SuperSub('_','e','ₑ')
-call s:SuperSub('_','h','ₕ')
-call s:SuperSub('_','i','ᵢ')
-call s:SuperSub('_','j','ⱼ')
-call s:SuperSub('_','k','ₖ')
-call s:SuperSub('_','l','ₗ')
-call s:SuperSub('_','m','ₘ')
-call s:SuperSub('_','n','ₙ')
-call s:SuperSub('_','o','ₒ')
-call s:SuperSub('_','p','ₚ')
-call s:SuperSub('_','r','ᵣ')
-call s:SuperSub('_','s','ₛ')
-call s:SuperSub('_','t','ₜ')
-call s:SuperSub('_','u','ᵤ')
-call s:SuperSub('_','v','ᵥ')
-call s:SuperSub('_','x','ₓ')
-call s:SuperSub('_','+','₊')
-call s:SuperSub('_','-','₋')
-call s:SuperSub('_','/','ˏ')
-call s:SuperSub('_','(','₍')
-call s:SuperSub('_',')','₎')
-call s:SuperSub('_','\\beta','ᵦ')
-call s:SuperSub('_','\\rho','ᵨ')
-call s:SuperSub('_','\\phi','ᵩ')
-call s:SuperSub('_','\\gamma','ᵧ')
-call s:SuperSub('_','\\chi','ᵪ')
-
 " customized tex conceal and highlight
 syn match ItemizeBegin '\\begin{itemize}' conceal cchar=I
 syn match ItemizeEnd '\\end{itemize}' conceal cchar=I
