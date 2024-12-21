@@ -11,7 +11,6 @@ hi Verbatim gui=None guifg=#E7EAE5
 hi Python gui=None guifg=#DDD6E1
 hi Problem gui=None guifg=#DDD6E1
 hi Comment gui=None guifg=#808080
-hi CommentStyleII gui=None guifg=#808080
 ""
 hi Url gui=underline guifg=#CBC3E3
 hi Label gui=None guifg=None

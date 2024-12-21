@@ -11,6 +11,7 @@ syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin
 syn match CommentInlineBegin '% ' contained conceal
 syn match CommentInlineFoldingBegin '{{{' conceal cchar={
 syn match CommentInlineFoldingEnd '}}}' conceal cchar=}
+hi CommentInline gui=None guifg=#808080
 
 " inline conceal (A-Z)
 
