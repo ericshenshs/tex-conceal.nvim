@@ -2,6 +2,8 @@ echom "Tex-Conceal tex.vim loaded"
 
 " Original file is https://github.com/wjakob/wjakob.vim/blob/master/after/syntax/tex.vim
 
+" We add more customized tex-conceal specific concealing.
+
 " not defined in vim/runtime/syntax/tex.vim
 syn match texMathSymbol '\\langle\>\s*' contained conceal cchar=⟨
 syn match texMathSymbol '\s*\\rangle\>' contained conceal cchar=⟩
