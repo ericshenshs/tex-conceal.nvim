@@ -45,8 +45,10 @@ syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' conceal
 " syn match VerbatimInlineEnd '|' contained conceal
 " hi VerbatimInline gui=italic guifg=#eab676
 
-syntax region texVerb start=+\\verb|+ end=+|+ oneline containedin=ALL keepend concealends
-hi texVerb gui=italic guifg=#eab676
+syntax region VerbInline start=+\\verb|+ end=+|+ oneline containedin=ALL concealends keepend contains=VerbInlineBegin,VerbInlineEnd
+syn match VerbInlineBegin '\\verb|' contained conceal
+syn match VerbInlineEnd '|' contained conceal
+hi VerbInline gui=italic guifg=#eab676
 
 " environments (A-Z) {{{1
 
