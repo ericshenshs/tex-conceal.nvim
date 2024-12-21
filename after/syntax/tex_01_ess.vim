@@ -30,6 +30,7 @@ hi Paragraph gui=bold guifg=#96B3C2
 " links (external)
 syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend
 syn region Url matchgroup=UrlMatch start='\\url{\s*' end='\s*}' concealends keepend
+hi Url gui=underline guifg=#CBC3E3
 
 " links (internal)
 syntax match Label /\\label{[^}]*}/ containedin=ALL conceal cchar=l
@@ -58,9 +59,11 @@ hi VerbInline gui=italic guifg=#eab676
 
 " environments (A-Z) {{{1
 
-" c
+" card
 syn match CardBegin '\\begin{card}' conceal cchar=c
 syn match CardEnd '\\end{card}' conceal cchar=c
+hi CardBegin guibg=#1e81b0
+hi CardEnd guibg=#1e81b0
 
 " e
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=e
@@ -89,3 +92,5 @@ syn match ProblemEnd '\\end{problem}' contained conceal cchar=P
 syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend contains=VerbatimBegin,VerbatimEnd
 syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=V
 syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=V
+hi VerbatimBegin guibg=#eab676
+hi VerbatimEnd guibg=#eab676
