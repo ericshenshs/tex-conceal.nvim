@@ -9,6 +9,20 @@ echom "Tex-Conceal tex_01_ess.vim loaded"
 " return
 syn match LineBreak '\\\\' conceal cchar=⏎
 
+" tab
+syn match NullQuad '\\null\\quad' contains=NullQuadHead,NullQuadTail
+syn match NullQuadHead '\\null' containedin=NullQuad conceal cchar=
+syn match NullQuadTail '\\quad' containedin=NullQuad conceal cchar=␣
+
+syn match Quad '\\quad' conceal cchar=␣
+syn match QQuad '\\qquad' contains=QQuadHead,QQuadTail
+syn match QQuadHead '\\' containedin=QQuad conceal cchar=␣
+syn match QQuadTail 'qquad' containedin=QQuad conceal cchar=␣
+
+syn match NullQquad '\\null\\qquad' contains=NullQquadHead,NullQquadTail
+syn match NullQquadHead '\\null' containedin=NullQuad conceal cchar=␣
+syn match NullQquadTail '\\qquad' containedin=NullQuad conceal cchar=␣
+
 " comment
 syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin, CommentInlineFoldingBegin, CommentInlineFoldingEnd
 syn match CommentInlineBegin '% ' contained conceal
