@@ -11,8 +11,8 @@ syn match LineBreak '\\\\' conceal cchar=⏎
 
 " tab
 syn match NullQuad '\\null\\quad' contains=NullQuadHead,NullQuadTail
-syn match NullQuadHead '\\null' containedin=NullQuad conceal cchar=
-syn match NullQuadTail '\\quad' containedin=NullQuad conceal cchar=␣
+syn match NullQuadHead '\\null' contained conceal cchar=
+syn match NullQuadTail '\\quad' contained conceal cchar=␣
 
 " syn match Quad '\\quad' conceal cchar=␣
 " syn match QQuad '\\qquad' contains=QQuadHead,QQuadTail
@@ -20,8 +20,8 @@ syn match NullQuadTail '\\quad' containedin=NullQuad conceal cchar=␣
 " syn match QQuadTail 'qquad' containedin=QQuad conceal cchar=␣
 
 syn match NullQquad '\\null\\qquad' contains=NullQquadHead,NullQquadTail
-syn match NullQquadHead '\\null' containedin=NullQquad conceal cchar=␣
-syn match NullQquadTail '\\qquad' containedin=NullQquad conceal cchar=␣
+syn match NullQquadHead '\\null' contained conceal cchar=␣
+syn match NullQquadTail '\\qquad' contained conceal cchar=␣
 
 " comment
 syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin, CommentInlineFoldingBegin, CommentInlineFoldingEnd
