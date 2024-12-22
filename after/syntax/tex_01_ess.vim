@@ -7,7 +7,7 @@ echom "Tex-Conceal tex_01_ess.vim loaded"
 " inline (A-Z) {{{1
 
 " return
-syn match LineBreak '\\\\' conceal cchar=⏎
+syn match LineBreak '\\\\' conceal cchar=␤
 
 " comment
 syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin, CommentInlineFoldingBegin, CommentInlineFoldingEnd
