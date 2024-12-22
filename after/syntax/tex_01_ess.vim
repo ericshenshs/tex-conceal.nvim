@@ -11,7 +11,7 @@ syn match LineBreak '\\\\' conceal cchar=⏎
 
 " tab
 syn match NullQuad '\\null\\quad' contains=NullQuadHead,NullQuadTail
-syn match NullQuadHead '\\null' contained conceal cchar=
+syn match NullQuadHead '\\null' contained conceal
 syn match NullQuadTail '\\quad' contained conceal cchar=␣
 
 " syn match Quad '\\quad' conceal cchar=␣
