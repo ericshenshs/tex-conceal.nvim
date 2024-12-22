@@ -20,8 +20,8 @@ syn match NullQuadTail '\\quad' containedin=NullQuad conceal cchar=␣
 " syn match QQuadTail 'qquad' containedin=QQuad conceal cchar=␣
 
 syn match NullQquad '\\null\\qquad' contains=NullQquadHead,NullQquadTail
-syn match NullQquadHead '\\null' containedin=NullQuad conceal cchar=␣
-syn match NullQquadTail '\\qquad' containedin=NullQuad conceal cchar=␣
+syn match NullQquadHead '\\null' containedin=NullQquad conceal cchar=␣
+syn match NullQquadTail '\\qquad' containedin=NullQquad conceal cchar=␣
 
 " comment
 syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin, CommentInlineFoldingBegin, CommentInlineFoldingEnd
