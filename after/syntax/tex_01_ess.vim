@@ -97,3 +97,9 @@ syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=V
 syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=V
 hi VerbatimBegin guibg=#eab676
 hi VerbatimEnd guibg=#eab676
+
+syn region VerbatimEscape  start='\\begin{VerbatimEscape}' end='\\end{VerbatimEscape}' keepend contains=VerbatimEscapeBegin,VerbatimEscapeEnd
+syn match VerbatimEscapeBegin '\\begin{VerbatimEscape}' contained conceal cchar=V
+syn match VerbatimEscapeEnd '\\end{VerbatimEscape}' contained conceal cchar=V
+hi VerbatimEscapeBegin guibg=#9d00ff
+hi VerbatimEscapeEnd guibg=#9d00ff
