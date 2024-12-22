@@ -75,6 +75,11 @@ syn match VerbInlineBegin '\\verb|' contained conceal
 syn match VerbInlineEnd '|' contained conceal
 hi VerbInline gui=italic guifg=#eab676
 
+syntax region LstInline start=+\\lstinline|+ end=+|+ oneline containedin=ALL concealends keepend contains=LstInlineBegin,LstInlineEnd
+syn match LstInlineBegin '\\lstinline|' contained conceal
+syn match LstInlineEnd '|' contained conceal
+hi LstInline gui=italic guifg=#eab676
+
 " environments (A-Z) {{{1
 
 " card
