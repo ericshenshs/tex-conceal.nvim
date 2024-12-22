@@ -10,14 +10,15 @@ echom "Tex-Conceal tex_01_ess.vim loaded"
 syn match LineBreak '\\\\' conceal cchar=⏎
 
 " tab
+syn match Quad '\\quad' conceal cchar=␣
+
+syn match QQuad '\\qquad' contains=QQuadHead,QQuadTail
+syn match QQuadHead '\\' contained conceal cchar=␣
+syn match QQuadTail 'qquad' contained conceal cchar=␣
+
 syn match NullQuad '\\null\\quad' contains=NullQuadHead,NullQuadTail
 syn match NullQuadHead '\\null' contained conceal
 syn match NullQuadTail '\\quad' contained conceal cchar=␣
-
-" syn match Quad '\\quad' conceal cchar=␣
-" syn match QQuad '\\qquad' contains=QQuadHead,QQuadTail
-" syn match QQuadHead '\\' containedin=QQuad conceal cchar=␣
-" syn match QQuadTail 'qquad' containedin=QQuad conceal cchar=␣
 
 syn match NullQquad '\\null\\qquad' contains=NullQquadHead,NullQquadTail
 syn match NullQquadHead '\\null' contained conceal cchar=␣
