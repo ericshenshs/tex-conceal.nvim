@@ -68,6 +68,7 @@ hi HrefText gui=underline guifg=#1e81b0
 
 " font format
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
+hi Textbf gui=bold
 
 " verbatim
 syntax region VerbInline start=+\\verb|+ end=+|+ oneline containedin=ALL concealends keepend contains=VerbInlineBegin,VerbInlineEnd
