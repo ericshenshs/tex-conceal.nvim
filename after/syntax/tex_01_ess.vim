@@ -90,14 +90,16 @@ hi CardBegin guibg=#1e81b0
 hi CardEnd guibg=#1e81b0
 
 " carddone
-syn region CardDoneBeginContext start='\\begin{carddone}{' end='}' contains=CardDoneBeginBegin,CardDoneBeginEnd,CardDoneContent keepend
-syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal
-syn match CardDoneBeginEnd '}' contained conceal
-syn match CardDoneEnd '\\end{carddone}' conceal
+syn region CardDoneBegin start='\\begin{carddone}{' end='}' contains=CardDoneBeginBegin,CardDoneBeginEnd,CardDoneContent keepend
 syn match CardDoneContent '[^}]*' contained
 hi CardDoneContent gui=underline
+
+syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal
+syn match CardDoneBeginEnd '}' contained conceal
 hi CardDoneBeginBegin guibg=#808080
 hi CardDoneBeginEnd guibg=#808080
+
+syn match CardDoneEnd '\\end{carddone}' conceal
 hi CardDoneEnd guibg=#808080
 
 " e
