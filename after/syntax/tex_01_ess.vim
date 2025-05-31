@@ -92,11 +92,11 @@ hi CardEnd guibg=#1e81b0
 " carddone
 " syn match CardDoneBegin '\\begin{carddone}' conceal cchar=
 syn region CardDoneBeginContext start='\\begin{carddone}{' end='}' contains=CardDoneBeginBegin,CardDoneBeginEnd keepend
-syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal cchar=
-syn match CardDoneBeginEnd '}' contained conceal cchar=
-hi CardDoneBeginContext guifg=bold
-syn match CardDoneEnd '\\end{carddone}' conceal cchar=
+syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal
+syn match CardDoneBeginEnd '}' contained conceal
+syn match CardDoneEnd '\\end{carddone}' conceal
 " hi CardDoneBegin guibg=#808080
+hi CardDoneBeginContext guifg=bold
 hi CardDoneEnd guibg=#808080
 
 " e
