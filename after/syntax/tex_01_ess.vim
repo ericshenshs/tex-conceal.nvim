@@ -103,6 +103,9 @@ syn match EnumerateEnd '\\end{enumerate}' conceal cchar=e
 syn match ItemizeBegin '\\begin{itemize}' conceal cchar=i
 syn match ItemizeEnd '\\end{itemize}' conceal cchar=i
 
+syn match ItemSymbol '\item' contained conceal cchar=·
+hi ItemSymbol gui=italic guifg=#1e81b0
+
 " m
 syn region Comment start='\\begin{comment}' end='\\end{comment}' keepend contains=CommentBegin,CommentEnd
 syn match CommentBegin '\\begin{comment}' contained conceal cchar=m
