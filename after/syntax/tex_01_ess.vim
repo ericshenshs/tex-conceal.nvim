@@ -103,7 +103,7 @@ syn match EnumerateEnd '\\end{enumerate}' conceal cchar=e
 syn match ItemizeBegin '\\begin{itemize}' conceal cchar=i
 syn match ItemizeEnd '\\end{itemize}' conceal cchar=i
 
-syn match ItemSymbol '\item' contained conceal cchar=·
+syn match ItemSymbol '\\item' contained conceal cchar=·
 hi ItemSymbol gui=italic guifg=#1e81b0
 
 " m
