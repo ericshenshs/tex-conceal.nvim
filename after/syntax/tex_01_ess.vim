@@ -91,10 +91,12 @@ hi CardBegin guibg=#1e81b0
 hi CardEnd guibg=#1e81b0
 
 " carddone
-syn match CardDoneBegin '\\begin{carddone}' conceal cchar=c
-syn match CardDoneEnd '\\end{carddone}' conceal cchar=c
+syn region CardDoneContext start='\\begin{carddone}' end='\\end{carddone}' contains=CardDoneBegin,CardDoneEnd
+syn match CardDoneBegin '\\begin{carddone}' contained conceal cchar=c
+syn match CardDoneEnd '\\end{carddone}' contained conceal cchar=c
 hi CardDoneBegin guibg=#808080
 hi CardDoneEnd guibg=#808080
+hi CardDoneContext guibg=#d3d3d3
 
 " e
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=e
