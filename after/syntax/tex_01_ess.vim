@@ -89,7 +89,6 @@ syn match CardBegin '\\begin{card}' contained conceal cchar=c
 syn match CardEnd '\\end{card}' contained conceal cchar=c
 hi CardBegin guibg=#1e81b0
 hi CardEnd guibg=#1e81b0
-hi CardContext guibg=#d3d3d3
 
 " carddone
 syn match CardDoneBegin '\\begin{carddone}' conceal cchar=c
