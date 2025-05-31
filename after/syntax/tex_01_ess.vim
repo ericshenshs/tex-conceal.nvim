@@ -84,19 +84,19 @@ hi LstInline gui=italic guifg=#f0982b
 " environments (A-Z) {{{1
 
 " card
-syn region CardContext start='\\begin{card}' end='\\end{card}' contains=ALL concealends
+" syn region CardContext start='\\begin{card}' end='\\end{card}' contains=ALL concealends
 syn match CardBegin '\\begin{card}' contained conceal cchar=c
 syn match CardEnd '\\end{card}' contained conceal cchar=c
 hi CardBegin guibg=#1e81b0
 hi CardEnd guibg=#1e81b0
 
 " carddone
-syn region CardDoneContext start='\\begin{carddone}' end='\\end{carddone}' contains=ALL concealends
+" syn region CardDoneContext start='\\begin{carddone}' end='\\end{carddone}' contains=ALL concealends
 syn match CardDoneBegin '\\begin{carddone}' contained conceal cchar=c
 syn match CardDoneEnd '\\end{carddone}' contained conceal cchar=c
 hi CardDoneBegin guibg=#808080
 hi CardDoneEnd guibg=#808080
-hi CardDoneContext guifg=#808080
+" hi CardDoneContext guifg=#808080
 
 " e
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=e
