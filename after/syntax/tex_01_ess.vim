@@ -89,6 +89,12 @@ syn match CardEnd '\\end{card}' conceal cchar=c
 hi CardBegin guibg=#1e81b0
 hi CardEnd guibg=#1e81b0
 
+" carddone
+syn match CardDoneBegin '\\begin{carddone}' conceal cchar=c
+syn match CardDoneEnd '\\end{carddone}' conceal cchar=c
+hi CardDoneBegin guibg=#808080
+hi CardDoneEnd guibg=#808080
+
 " e
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=e
 syn match EnumerateEnd '\\end{enumerate}' conceal cchar=e
