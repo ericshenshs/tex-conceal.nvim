@@ -98,11 +98,14 @@ hi CardDoneEnd guibg=#808080
 " e
 syn match EnumerateBegin '\\begin{enumerate}' conceal cchar=e
 syn match EnumerateEnd '\\end{enumerate}' conceal cchar=e
+syn region EnumerateContext start='\\begin{enumerate}' end='\\end{enumerate}' contains=ItemSymbol concealends
 
 " i
 syn match ItemizeBegin '\\begin{itemize}' conceal cchar=i
 syn match ItemizeEnd '\\end{itemize}' conceal cchar=i
+syn region ItemizeContext start='\\begin{itemize}' end='\\end{itemize}' contains=ItemSymbol concealends
 
+" item
 syn match ItemSymbol '\\item' contained conceal cchar=·
 hi ItemSymbol gui=italic guifg=#1e81b0
 
