@@ -84,12 +84,21 @@ hi LstInline gui=italic guifg=#f0982b
 " environments (A-Z) {{{1
 
 " card
-syn match CardBegin '\\begin{card}' conceal cchar=c
-syn match CardEnd '\\end{card}' conceal cchar=c
-hi CardBegin guibg=#1e81b0
+" Note that here the order of concealings and hilighting matters.
+syn region CardBegin start='\\begin{card}{' end='}' contains=CardBeginBegin,CardBeginEnd,CardContent keepend
+syn match CardContent '[^}]*' contained
+hi CardContent gui=underline guibg=#1e81b0
+
+syn match CardBeginBegin '\\begin{card}{' contained conceal
+syn match CardBeginEnd '}' contained conceal
+hi CardBeginBegin guibg=#1e81b0
+hi CardBeginEnd guibg=#1e81b0
+
+syn match CardEnd '\\end{card}' conceal
 hi CardEnd guibg=#1e81b0
 
 " carddone
+" Note that here the order of concealings and hilighting matters.
 syn region CardDoneBegin start='\\begin{carddone}{' end='}' contains=CardDoneBeginBegin,CardDoneBeginEnd,CardDoneContent keepend
 syn match CardDoneContent '[^}]*' contained
 hi CardDoneContent gui=underline
