@@ -89,7 +89,12 @@ syn region CardBegin start='\\begin{card}{' end='}' contains=CardBeginBegin,Card
 syn match CardContent '[^}]*' contained
 hi CardContent gui=bold,underline
 
-syn match CardBeginBegin '\\begin{card}{' contained conceal
+" 🔴 🔵 🟠 🟡 🟢 🟣 🟤 ⚫ ⚪ ⭕
+" 🟥 🟦 🟧 🟨 🟩 🟪 🟫 ⬛ ⬜
+" 💠 🔶 🔷 🔸 🔹
+" 🔺 🔻
+" ✅
+syn match CardBeginBegin '\\begin{card}{' contained conceal cchar=🟡
 syn match CardBeginEnd '}' contained conceal
 hi CardBeginBegin guibg=#1e81b0
 hi CardBeginEnd guibg=#1e81b0
@@ -103,7 +108,7 @@ syn region CardDoneBegin start='\\begin{carddone}{' end='}' contains=CardDoneBeg
 syn match CardDoneContent '[^}]*' contained
 hi CardDoneContent gui=italic,underline guifg=#808080
 
-syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal
+syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal cchar=✅
 syn match CardDoneBeginEnd '}' contained conceal
 hi CardDoneBeginBegin guibg=#808080
 hi CardDoneBeginEnd guibg=#808080
