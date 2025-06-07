@@ -106,7 +106,7 @@ hi CardEnd guibg=#1e81b0
 " Note that here the order of concealings and hilighting matters.
 syn region CardDoneBegin start='\\begin{carddone}{' end='}' contains=CardDoneBeginBegin,CardDoneBeginEnd,CardDoneContent keepend
 syn match CardDoneContent '[^}]*' contained
-hi CardDoneContent gui=underline guifg=#808080
+hi CardDoneContent guifg=#808080
 
 syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal cchar=✅
 syn match CardDoneBeginEnd '}' contained conceal
