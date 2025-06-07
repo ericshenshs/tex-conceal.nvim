@@ -87,7 +87,7 @@ hi LstInline gui=italic guifg=#f0982b
 " Note that here the order of concealings and hilighting matters.
 syn region CardBegin start='\\begin{card}{' end='}' contains=CardBeginBegin,CardBeginEnd,CardContent keepend
 syn match CardContent '[^}]*' contained
-hi CardContent gui=bold,underline
+hi CardContent gui=bold
 
 " 🔴 🔵 🟠 🟡 🟢 🟣 🟤 ⚫ ⚪ ⭕
 " 🟥 🟦 🟧 🟨 🟩 🟪 🟫 ⬛ ⬜
