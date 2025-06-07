@@ -150,8 +150,8 @@ syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend con
 " We use highlighting to see which part is in Verbatim.
 " We use \iffalse \fi to devide and conquer bugs.
 " We check *.log to check error messages.
-syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=
-syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=
+syn match VerbatimBegin '\\begin{Verbatim}' contained conceal
+syn match VerbatimEnd '\\end{Verbatim}' contained conceal
 hi VerbatimBegin guibg=#eab676
 hi VerbatimEnd guibg=#eab676
 
