@@ -147,8 +147,11 @@ syn match ProblemEnd '\\end{problem}' contained conceal cchar=P
 
 " V
 syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend contains=VerbatimBegin,VerbatimEnd
-syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=V
-syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=V
+" We use highlighting to see which part is in Verbatim.
+" We use \iffalse \fi to devide and conquer bugs.
+" We check *.log to check error messages.
+syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=
+syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=
 hi VerbatimBegin guibg=#eab676
 hi VerbatimEnd guibg=#eab676
 
