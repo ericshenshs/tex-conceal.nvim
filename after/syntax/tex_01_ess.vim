@@ -109,11 +109,11 @@ syn match CardDoneContent '[^}]*' contained
 hi CardDoneContent guifg=#808080
 
 syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal cchar=☑
-syn match CardDoneBeginEnd '}' contained conceal
+syn match CardDoneBeginEnd '}' contained conceal cchar={
 hi CardDoneBeginBegin guibg=#808080
 hi CardDoneBeginEnd guibg=#808080
 
-syn match CardDoneEnd '\\end{carddone}' conceal
+syn match CardDoneEnd '\\end{carddone}' conceal cchar=}
 hi CardDoneEnd guibg=#808080
 
 " e
