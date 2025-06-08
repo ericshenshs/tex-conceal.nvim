@@ -94,12 +94,12 @@ hi CardContent gui=bold
 " 💠 🔶 🔷 🔸 🔹
 " 🔺 🔻
 " ✅
-syn match CardBeginBegin '\\begin{card}{' contained conceal
-syn match CardBeginEnd '}' contained conceal
+syn match CardBeginBegin '\\begin{card}{' contained conceal cchar=-
+syn match CardBeginEnd '}' contained conceal cchar={
 hi CardBeginBegin guibg=#1e81b0
 hi CardBeginEnd guibg=#1e81b0
 
-syn match CardEnd '\\end{card}' conceal
+syn match CardEnd '\\end{card}' conceal cchar=}
 hi CardEnd guibg=#1e81b0
 
 " carddone
@@ -150,8 +150,8 @@ syn region Verbatim  start='\\begin{Verbatim}' end='\\end{Verbatim}' keepend con
 " We use highlighting to see which part is in Verbatim.
 " We use \iffalse \fi to devide and conquer bugs.
 " We check *.log to check error messages.
-syn match VerbatimBegin '\\begin{Verbatim}' contained conceal
-syn match VerbatimEnd '\\end{Verbatim}' contained conceal
+syn match VerbatimBegin '\\begin{Verbatim}' contained conceal cchar=`
+syn match VerbatimEnd '\\end{Verbatim}' contained conceal cchar=`
 hi VerbatimBegin guibg=#eab676
 hi VerbatimEnd guibg=#eab676
 
