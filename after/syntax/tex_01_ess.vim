@@ -95,11 +95,11 @@ hi CardContent gui=bold
 " 🔺 🔻
 " ✅
 syn match CardBeginBegin '\\begin{card}{' contained conceal cchar=-
-syn match CardBeginEnd '}' contained conceal cchar={
+syn match CardBeginEnd '}' contained conceal
 hi CardBeginBegin guibg=#1e81b0
 hi CardBeginEnd guibg=#1e81b0
 
-syn match CardEnd '\\end{card}' conceal cchar=}
+syn match CardEnd '\\end{card}' conceal cchar=⏎
 hi CardEnd guibg=#1e81b0
 
 " carddone
@@ -109,11 +109,11 @@ syn match CardDoneContent '[^}]*' contained
 hi CardDoneContent guifg=#808080
 
 syn match CardDoneBeginBegin '\\begin{carddone}{' contained conceal cchar=☑
-syn match CardDoneBeginEnd '}' contained conceal cchar={
+syn match CardDoneBeginEnd '}' contained conceal
 hi CardDoneBeginBegin guibg=#808080
 hi CardDoneBeginEnd guibg=#808080
 
-syn match CardDoneEnd '\\end{carddone}' conceal cchar=}
+syn match CardDoneEnd '\\end{carddone}' conceal cchar=⏎
 hi CardDoneEnd guibg=#808080
 
 " e
