@@ -38,11 +38,13 @@ syn region Part matchgroup=PartMatch start='\\part{\s*' end='\s*}' concealends k
 syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' concealends keepend
 syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend
 syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend
+syn region Subsubsection matchgroup=SubsubsectionMatch start='\\subsubsection{\s*' end='\s*}' concealends keepend
 syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend
 hi Part gui=bold guifg=#50B4D8
 hi Chapter gui=bold guifg=#9EDDEF
 hi Section gui=bold guifg=#F7E5B7
 hi Subsection gui=bold guifg=#CAB3C1
+hi Subsubsection gui=bold guifg=#A9E3C4
 hi Paragraph gui=bold guifg=#96B3C2
 
 " links (external)
