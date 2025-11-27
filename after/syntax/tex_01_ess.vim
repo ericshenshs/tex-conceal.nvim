@@ -24,9 +24,6 @@ syn match NullQquad '\\null\\qquad' contains=NullQquadHead,NullQquadTail
 syn match NullQquadHead '\\null' contained conceal cchar=␣
 syn match NullQquadTail '\\qquad' contained conceal cchar=␣
 
-" checkmarks
-syn match Checkmark '\\checkmark' conceal cchar=✓
-
 " comment
 syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin, CommentInlineFoldingBegin, CommentInlineFoldingEnd
 syn match CommentInlineBegin '% ' contained conceal
@@ -37,18 +34,21 @@ hi CommentInline gui=italic guifg=#808080
 " inline conceal (A-Z)
 
 " titles
-syn region Part matchgroup=PartMatch start='\\part{\s*' end='\s*}' concealends keepend
-syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' concealends keepend
-syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend
-syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend
-syn region Subsubsection matchgroup=SubsubsectionMatch start='\\subsubsection{\s*' end='\s*}' concealends keepend
-syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend
+syn region Part matchgroup=PartMatch start='\\part{\s*' end='\s*}' concealends keepend contains=Checkmark
+syn region Chapter matchgroup=ChapterMatch start='\\chapter{\s*' end='\s*}' concealends keepend contains=Checkmark
+syn region Section matchgroup=SectionMatch start='\\section{\s*' end='\s*}' concealends keepend contains=Checkmark
+syn region Subsection matchgroup=SubsectionMatch start='\\subsection{\s*' end='\s*}' concealends keepend contains=Checkmark
+syn region Subsubsection matchgroup=SubsubsectionMatch start='\\subsubsection{\s*' end='\s*}' concealends keepend contains=Checkmark
+syn region Paragraph matchgroup=ParagraphMatch start='\\paragraph{\s*' end='\s*}' concealends keepend contains=Checkmark
 hi Part gui=bold guifg=#50B4D8
 hi Chapter gui=bold guifg=#9EDDEF
 hi Section gui=bold guifg=#F7E5B7
 hi Subsection gui=bold guifg=#CAB3C1
 hi Subsubsection gui=bold guifg=#A9E3C4
 hi Paragraph gui=bold guifg=#96B3C2
+
+" checkmarks
+syn match Checkmark '\\checkmark' contained conceal cchar=✓
 
 " links (external)
 syn region Reversedhref matchgroup=ReversedhrefMatch start='\\reversedhref{\s*' end='\s*}' concealends keepend
