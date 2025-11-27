@@ -24,6 +24,9 @@ syn match NullQquad '\\null\\qquad' contains=NullQquadHead,NullQquadTail
 syn match NullQquadHead '\\null' contained conceal cchar=␣
 syn match NullQquadTail '\\qquad' contained conceal cchar=␣
 
+" checkmarks
+syn match Checkmark '\\checkmark' conceal cchar=✓
+
 " comment
 syn region CommentInline start='% ' end='\n' keepend contains=CommentInlineBegin, CommentInlineFoldingBegin, CommentInlineFoldingEnd
 syn match CommentInlineBegin '% ' contained conceal
