@@ -76,10 +76,16 @@ hi HrefText gui=underline guifg=#1e81b0
 " font format
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
 hi Textbf gui=bold
+" Contained version (same effect)
+syn region TextbfContained matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' contained concealends keepend containedin=ALL
+hi TextbfContained gui=bold
 
 " sout
 syn region Textsout matchgroup=textsoutmatch start='\\sout{\s*' end='\s*}' concealends keepend
 hi Textsout gui=strikethrough
+" Contained version (same effect)
+syn region TextsoutContained matchgroup=textsoutmatch start='\\sout{\s*' end='\s*}' contained concealends keepend containedin=ALL
+hi TextsoutContained gui=strikethrough
 
 " verbatim
 syntax region VerbInline start=+\\verb|+ end=+|+ oneline containedin=ALL concealends keepend contains=VerbInlineBegin,VerbInlineEnd
