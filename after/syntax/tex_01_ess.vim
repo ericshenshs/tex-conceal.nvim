@@ -77,6 +77,10 @@ hi HrefText gui=underline guifg=#1e81b0
 syn region Textbf matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' concealends keepend
 hi Textbf gui=bold
 
+" sout
+syn region Textsout matchgroup=textsoutmatch start='\\sout{\s*' end='\s*}' concealends keepend
+hi Textsout gui=strikethrough
+
 " verbatim
 syntax region VerbInline start=+\\verb|+ end=+|+ oneline containedin=ALL concealends keepend contains=VerbInlineBegin,VerbInlineEnd
 syn match VerbInlineBegin '\\verb|' contained conceal
