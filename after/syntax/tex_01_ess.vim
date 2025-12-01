@@ -80,6 +80,13 @@ hi Textbf gui=bold
 syn region TextbfContained matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}' contained concealends keepend containedin=ALL
 hi TextbfContained gui=bold
 
+" font format
+syn region TextDTcomment matchgroup=textDTcommentmatch start='\\DTcomment{\s*' end='\s*}' concealends keepend
+hi TextDTcomment gui=italic
+" Contained version (same effect)
+syn region TextDTcommentContained matchgroup=textDTcommentmatch start='\\DTcomment{\s*' end='\s*}' contained concealends keepend containedin=ALL
+hi TextDTcommentContained gui=italic
+
 " sout
 syn region Textsout matchgroup=textsoutmatch start='\\sout{\s*' end='\s*}' concealends keepend
 hi Textsout gui=strikethrough
