@@ -63,7 +63,7 @@ syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' conc
 syntax region Label start=+\\label{+ end=+}+ oneline containedin=ALL concealends keepend contains=LabelBegin,LabelEnd
 syn match LabelBegin '\\label{' contained conceal
 syn match LabelEnd '}' contained conceal
-hi Label gui=italic,underline guibg=#8FB8AE
+hi Label gui=underline guifg=#8FB8AE
 
 " hyperref
 syntax match HyperrefAll /\\hyperref\[[^]]*\]{[^}]*}/ containedin=ALL
