@@ -60,10 +60,10 @@ hi Url gui=underline guifg=#CBC3E3
 " links (internal)
 syn region PageRef matchgroup=PageRefMatch start='\\pageref{\s*' end='\s*}' concealends keepend
 
-syntax region Label start=+\\label{+ end=+}+ oneline containedin=ALL concealends keepend contains=LabelBegin,LabelEnd
+syntax region LabelInline start=+\\label{+ end=+}+ oneline containedin=ALL concealends keepend contains=LabelBegin,LabelEnd
 syn match LabelBegin '\\label{' contained conceal
 syn match LabelEnd '}' contained conceal
-hi Label gui=underline guifg=#8FB8AE
+hi LabelInline gui=underline
 
 " hyperref
 syntax match HyperrefAll /\\hyperref\[[^]]*\]{[^}]*}/ containedin=ALL
