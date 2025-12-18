@@ -85,6 +85,13 @@ syn region TextbfContained matchgroup=textbfmatch start='\\textbf{\s*' end='\s*}
 hi TextbfContained gui=bold
 
 " font format
+syn region Underline matchgroup=underlinematch start='\\underline{\s*' end='\s*}' concealends keepend
+hi Underline gui=underline
+" Contained version (same effect)
+syn region UnderlineContained matchgroup=underlinematch start='\\underline{\s*' end='\s*}' contained concealends keepend containedin=ALL
+hi UnderlineContained gui=underline
+
+" font format
 syn region TextDTcomment matchgroup=textDTcommentmatch start='\\DTcomment{\s*' end='\s*}' concealends keepend
 hi TextDTcomment gui=italic
 " Contained version (same effect)
