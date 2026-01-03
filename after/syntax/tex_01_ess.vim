@@ -1,4 +1,4 @@
-echo "Tex-Conceal tex_01_ess.vim loaded"
+" echo "Tex-Conceal tex_01_ess.vim loaded"
 
 " set customized tex concealing
 

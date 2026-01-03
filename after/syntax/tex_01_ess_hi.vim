@@ -1,4 +1,4 @@
-echo "Tex-Conceal tex_01_ess_hi.vim loaded"
+" echo "Tex-Conceal tex_01_ess_hi.vim loaded"
 
 " set customized tex highlight
 

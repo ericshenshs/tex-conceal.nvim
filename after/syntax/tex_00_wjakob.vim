@@ -1,4 +1,4 @@
-echo "Tex-Conceal tex_00_wjakob.vim loaded"
+" echo "Tex-Conceal tex_00_wjakob.vim loaded"
 
 " Original file is https://github.com/wjakob/wjakob.vim/blob/master/after/syntax/tex.vim
 
