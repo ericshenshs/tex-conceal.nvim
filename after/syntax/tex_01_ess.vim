@@ -137,6 +137,24 @@ hi CardBeginEnd guibg=#1e81b0
 syn match CardEnd '\\end{card}' conceal cchar=⏎
 hi CardEnd guibg=#1e81b0
 
+" cardlisting
+syn region CardListingBegin start='\\begin{cardlisting}{' end='}' contains=CardListingBeginBegin,CardListingBeginEnd,CardListingContent keepend
+syn match CardListingContent '[^}]*' contained
+hi CardListingContent gui=bold
+
+" 🔴 🔵 🟠 🟡 🟢 🟣 🟤 ⚫ ⚪ ⭕
+" 🟥 🟦 🟧 🟨 🟩 🟪 🟫 ⬛ ⬜
+" 💠 🔶 🔷 🔸 🔹
+" 🔺 🔻
+" ✅
+syn match CardListingBeginBegin '\\begin{cardlisting}{' contained conceal cchar=-
+syn match CardListingBeginEnd '}' contained conceal
+hi CardListingBeginBegin guibg=#1e81b0
+hi CardListingBeginEnd guibg=#1e81b0
+
+syn match CardListingEnd '\\end{cardlisting}' conceal cchar=⏎
+hi CardListingEnd guibg=#1e81b0
+
 " carddone
 " Note that here the order of concealings and hilighting matters.
 syn region CardDoneBegin start='\\begin{carddone}{' end='}' contains=CardDoneBeginBegin,CardDoneBeginEnd,CardDoneContent keepend
