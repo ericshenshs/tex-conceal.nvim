@@ -4,9 +4,9 @@ setlocal foldexpr=CardFoldExpr()
 
 function! CardFoldExpr()
   let line = getline(v:lnum)
-  if line =~# '\\begin{\(card\|carddone\)}'
+  if line =~# '\\begin{\(card\|carddone\|cardlisting\)}'
     return '>1'
-  elseif line =~# '\\end{\(card\|carddone\)}'
+  elseif line =~# '\\end{\(card\|carddone\|cardlisting\)}'
     return '<1'
   else
     return '='
