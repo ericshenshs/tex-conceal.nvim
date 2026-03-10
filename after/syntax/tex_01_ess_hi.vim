@@ -6,6 +6,10 @@
 
 hi conceal gui=None guifg=None guibg=None
 
+" Prevent _ and ^ from being highlighted as errors outside math mode.
+" The built-in tex syntax (texOnlyMath) marks them as texError by default.
+hi link texOnlyMath NONE
+
 hi Verbatim gui=None guifg=#E7EAE5
 
 hi Python gui=None guifg=#DDD6E1
